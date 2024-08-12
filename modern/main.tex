@@ -56,6 +56,9 @@
 %\usepackage[default]{comfortaa}
 %\usepackage{cmbright}
 \usepackage[default]{raleway}
+% \usepackage{subcaption}
+\usepackage[caption = false]{subfig}
+
 %\usepackage{fetamont}
 %\usepackage[default]{gillius}
 %\usepackage[light,math]{iwona}
@@ -253,6 +256,7 @@
 &		 \larrow{bgcol}  #4\\[3pt]
 &		 \larrow{bgcol}  #5\\[6pt]
 	\end{tabular*}
+
 }
 
 % creates a stretched box as cv entry headline followed by some paragraphs about 
@@ -281,7 +285,6 @@
 
 \vspace{3pt}
 }
-
 
 \newcommand{\cvskills}[1]
 {
@@ -351,7 +354,7 @@
 
 \begin{figure}[H]
 \begin{flushright}
-	\includegraphics[trim= 320 130 460 210,clip,width=0.2\linewidth]{myfoto.jpg}	%trimming relative to image size!
+	\includegraphics[clip,width=0.3\linewidth]{myfoto.jpg}	%trimming relative to image size!
 \end{flushright}
 \end{figure}
 
@@ -370,10 +373,14 @@
 
 \vspace{-114pt}
 
+\metasection{Направления:}{Hardware Development, Software Development, Consulting} 
+\metasection{Умения:}{Электроника, Микроконтроллеры, Git}
+\metasection{Увлечения:}{Пешие и водные походы, велосипед}
+
 % \metasection{Status:}{M.Sc. Digital Media, Fullstack JS Engineer}
-% \metasection{Направления:}{Hardware Development, Software Development, Consulting} 
-% \metasection{Умения:}{Электроника, Микроконтроллеры, Git}
-% \metasection{Увлечения:}{Пешие и водные походы, велосипед}
+% \metasection{Fields:}{Project Management, Software Development, Consulting} 
+% \metasection{Tech:}{Meteor, Javascript, Bootstrap, Mongodb, Git, Webstorm, Sourcetree}
+% \metasection{Loves:}{Global Game Jam, Sci-Fi series, Stackoverflow, Fitness and Martial Arts}
 
 \vspace{6pt}
 
@@ -395,14 +402,15 @@
 %---------------------------------------------------------------------------------------
 %	EXPERIENCE
 %----------------------------------------------------------------------------------------
-\cvsection{Experience}
+\cvsection{Трудовой опыт}
 
+%
 \cvevents{2024 - настоящее время}{Ведущий инженер}{МТС Диджитал}{
   {Разработка "железа" умного дома, WiFi, Zigbee, BLE},
   {Моделирование и измерение антенн}
 }
+%\textcolor{softcol}{\hrule}
 
-% \textcolor{softcol}{\hrule}
 %
 \cvevents{2014 - настоящее время}{Разработчик, как хобби}{ООО РПС} {
 	{Разработка электронных узлов парковочных систем},
@@ -410,7 +418,6 @@
 	{Разработка датчика петлевых антенн}
 }
 
-%
 \cvevents{2019 - 2024}{Ведущий инженер}{ООО КуРэйт}{
 	{Разработка узлов систем квантового распределения ключа (КРК)},
 	{Лазерные импульсные источники до 100 пс},
@@ -421,24 +428,17 @@
 	{Разработка балансного детектора для КРК на непрерывных переменных}
 }
 
+%
+% \cvevent{2012 - 2014}{Scientific Employee / Software Development}{University of Bremen}{Invented a flexible assessment framework, targeting industrial trainees}{Supervised software development lifecycle, Recruited team members}
 
-% \textcolor{softcol}{\hrule}
+%\textcolor{softcol}{\hrule}
 
 %
 \cvevents{2010 - 2019}{Научный сотрудник}{ФГУП "18 ЦНИИ" МО РФ}{
 	{Проведение спецпроверок элементов иностранной компонентной базы},
 	{Разработка цифрового приемника команд на отечественной элементной базе}
 }
-
-\textcolor{softcol}{\hrule}
-
-
 %\textcolor{softcol}{\hrule}
-
-
-%
-% \cvevent{2010 - 2011}{Student Assistant / Programmer}{otulea.uni-bremen.de}{Realized an online diagnosis platform for workforce literacy development (Flex)}{Modeled software design, implemented various prototypes, conducted usability tests}
-
 
 %---------------------------------------------------------------------------------------
 %	EDUCATION SECTION
@@ -446,18 +446,16 @@
 \cvsection{Образование}
 
 \cvevents{2005-2010}{Инженер}{РХТУ им. Д.И. Менделеева}{
-	{Тема диплома: Измерение подвижности зарядов в ОЛЕД структуре на основе Alq3}
+	{Тема диплома: Влияние условий вакуумного термического напыления на подвижность носителей заряда в OLED структурах}
 }
 
 \cvevents{2010-2014}{Аспирант}{РХТУ им. Д.И. Менделеева}{
-	{Шифр 05.27.06 - Технология производства},
+	{Шифр 05.27.06 - Технология и оборудование для производства полупроводников, материалов и приборов электронной техники},
 	{Разработка установки для выращивания монокристаллов CdTe методом вертикального градиентного охлаждения под воздействием
 	аксиальных низкочастотых вибраций},
 	{Разработка ветрикальной 24х зонной печи, контроллера температуры},
 	{Разработка ПО управления установкой}
 }
-
-\cvsection{Наука}
 
 \cvsection{Навыки}
 
@@ -478,10 +476,45 @@
 	{RTOS, FreeRTOS, Azure RTOS},
 	{Middle C/C++},
 	{Middle Python},
-	{Middle C#}
+	{Middle C\#},
 	{CMake},
 	{Jira, Confluence, YourTrack, git}
 }
+
+\cvsection{Примеры работ}
+
+\begin{figure}[H]
+	\centering
+	\subfloat{\includegraphics[clip,width=0.4\linewidth]{../img/01-SPD.png}}
+	\subfloat{\includegraphics[clip,width=0.4\linewidth]{../img/02-SPD.png}}	%trimming relative to image size!
+	\caption{Single Photon Detector Controller}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\subfloat[Laser with adsorber controller]{\includegraphics[clip,width=0.6\linewidth,angle=90]{../img/05-Laser.png}}
+	\subfloat[DFB laser controller]{\includegraphics[clip,width=0.6\linewidth,angle=90]{../img/06-Laser.png}}	%trimming relative to image size!
+	\caption{Laser controllers}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\subfloat[]
+\end{figure}
+
+
+% \begin{figure}[H]
+% 	\begin{subfigure}{0.8\textwidth}
+% 		\centering
+% 		\includegraphics[clip,width=0.4\linewidth]{../img/01-SPD.png}	%trimming relative to image size!
+% 		\includegraphics[clip,width=0.4\linewidth]{../img/02-SPD.png}	%trimming relative to image size!
+% 		\caption{Single Photon Detector Controller}
+% 		\label{fig:sfig2}
+% 	\end{subfigure}
+% \end{figure}
+
+
+
 
 %-------------------------------------------------------------------------------------------------
 %	ARTIFICIAL FOOTER (fancy footer cannot exceed linewidth) 
@@ -489,7 +522,7 @@
 
 \null
 \vspace*{\fill}
-\hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.5\linewidth][c]{\mystrut \small \textcolor{white}{bitbucket.org}}}
+\hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.5\linewidth][c]{\mystrut \small \textcolor{white}{www.jankuester.com} $\cdot$ \textcolor{white}{github.com/jankapunkt}}}
 
 
 %============================================================================%
