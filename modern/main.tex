@@ -58,6 +58,7 @@
 \usepackage[default]{raleway}
 % \usepackage{subcaption}
 \usepackage[caption = false]{subfig}
+\usepackage{hyperref}
 
 %\usepackage{fetamont}
 %\usepackage[default]{gillius}
@@ -67,6 +68,7 @@
 % set font default
 \renewcommand*\familydefault{\sfdefault} 	
 \usepackage[T2A]{fontenc}
+\usepackage[english,russian]{babel}	% локализация и переносы
 
 % more font size definitions
 \usepackage{moresize}		
@@ -225,7 +227,7 @@
 %
 \newcommand{\metasection}[2]
 {
-\begin{tabular*}{1\textwidth}{p{2.4cm} p{11cm}}
+\begin{tabular*}{1\textwidth}{p{2.6cm} p{11cm}}
 \larrow{bgcol}	\normalsize{\textcolor{sectcol}{#1}}&#2\\[12pt]
 \end{tabular*}
 }
@@ -373,9 +375,9 @@
 
 \vspace{-114pt}
 
-\metasection{Направления:}{Hardware Development, Software Development, Consulting} 
-\metasection{Умения:}{Электроника, Микроконтроллеры, Git}
-\metasection{Увлечения:}{Пешие и водные походы, велосипед}
+\metasection{Направления}{Hardware Development, Software Development, Consulting} 
+\metasection{Умения}{Электроника, Микроконтроллеры, Git}
+\metasection{Увлечения}{Пешие и водные походы, велосипед}
 
 % \metasection{Status:}{M.Sc. Digital Media, Fullstack JS Engineer}
 % \metasection{Fields:}{Project Management, Software Development, Consulting} 
@@ -415,12 +417,13 @@
 \cvevents{2014 - настоящее время}{Разработчик, как хобби}{ООО РПС} {
 	{Разработка электронных узлов парковочных систем},
 	{Разработка ПО для узлов парковочных систем, Cortex-M0..Cortex-M4},
-	{Разработка датчика петлевых антенн}
+	{Разработка датчика петлевых антенн},
+	{Разработка системы оплаты по Bluetooth Low Energy}
 }
 
 \cvevents{2019 - 2024}{Ведущий инженер}{ООО КуРэйт}{
 	{Разработка узлов систем квантового распределения ключа (КРК)},
-	{Лазерные импульсные источники до 100 пс},
+	{Лазерные импульсные источники с длительностью импульса до 100 пс},
 	{Приемники лазерного излучения},
 	{Разработка контроллера однофотонного детектора},
 	{Разработка квантового генератора случайных чисел до 2,5 ГБит/с},
@@ -436,7 +439,7 @@
 %
 \cvevents{2010 - 2019}{Научный сотрудник}{ФГУП "18 ЦНИИ" МО РФ}{
 	{Проведение спецпроверок элементов иностранной компонентной базы},
-	{Разработка цифрового приемника команд на отечественной элементной базе}
+	{Разработка цифрового радиоприемника команд на отечественной элементной базе}
 }
 %\textcolor{softcol}{\hrule}
 
@@ -481,40 +484,41 @@
 	{Jira, Confluence, YourTrack, git}
 }
 
+\cvsection{Наука}
+
+\cvskills{
+	{Modeling of axial vibrational control technique for CdTe VGF crystal growth under controlled cadmium partial pressure \url{https://doi.org/10.1016/j.jcrysgro.2013.04.064}},
+	{Патент RU2527758C2 СПОСОБ СКРЫТНОГО ХРАНЕНИЯ КОНФИДЕНЦИАЛЬНЫХ ДАННЫХ В ЗАЩИЩЕННОЙ ЭНЕРГОНЕЗАВИСИМОЙ ПАМЯТИ И УСТРОЙСТВО ДЛЯ ЕГО РЕАЛИЗАЦИИ},
+	{Патент RU2788400C1 ВЫСОКОСКОРОСТНОЙ КВАНТОВЫЙ ГЕНЕРАТОР СЛУЧАЙНЫХ ЧИСЕЛ НА ПЕРЕКЛЮЧЕНИИ ПОЛЯРИЗАЦИИ В ПОЛУПРОВОДНИКОВОМ ЛАЗЕРЕ С ВЕРТИКАЛЬНЫМ РЕЗОНАТОРОМ (ВАРИАНТЫ) И СПОСОБ ФОРМИРОВАНИЯ СЛУЧАЙНОЙ ЧИСЛОВОЙ ПОСЛЕДОВАТЕЛЬНОСТИ С ЕГО ПОМОЩЬЮ}
+}
+
 \cvsection{Примеры работ}
 
 \begin{figure}[H]
 	\centering
 	\subfloat{\includegraphics[clip,width=0.4\linewidth]{../img/01-SPD.png}}
 	\subfloat{\includegraphics[clip,width=0.4\linewidth]{../img/02-SPD.png}}	%trimming relative to image size!
-	\caption{Single Photon Detector Controller}
+	\caption{Контроллер детектора одиночных фотонов}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
-	\subfloat[Laser with adsorber controller]{\includegraphics[clip,width=0.6\linewidth,angle=90]{../img/05-Laser.png}}
-	\subfloat[DFB laser controller]{\includegraphics[clip,width=0.6\linewidth,angle=90]{../img/06-Laser.png}}	%trimming relative to image size!
-	\caption{Laser controllers}
+	\subfloat[Лазер с адсорбером]{\includegraphics[clip,width=0.6\linewidth,angle=90]{../img/05-Laser.png}}
+	\subfloat[DFB лазер]{\includegraphics[clip,width=0.6\linewidth,angle=90]{../img/06-Laser.png}}	%trimming relative to image size!
+	\caption{Контроллеры лазеров}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
-	\subfloat[]
+	\subfloat{\includegraphics[clip,width=0.6\linewidth]{../img/04-QRNG.png}}
+	\caption{Квантовый генератор случайных чисел}
 \end{figure}
 
-
-% \begin{figure}[H]
-% 	\begin{subfigure}{0.8\textwidth}
-% 		\centering
-% 		\includegraphics[clip,width=0.4\linewidth]{../img/01-SPD.png}	%trimming relative to image size!
-% 		\includegraphics[clip,width=0.4\linewidth]{../img/02-SPD.png}	%trimming relative to image size!
-% 		\caption{Single Photon Detector Controller}
-% 		\label{fig:sfig2}
-% 	\end{subfigure}
-% \end{figure}
-
-
-
+\begin{figure}[H]
+	\centering
+	\subfloat{\includegraphics[clip,width=0.6\linewidth,angle=90]{../img/07-Slave.png}}
+	\caption{Программируемый логический контроллер}
+\end{figure}
 
 %-------------------------------------------------------------------------------------------------
 %	ARTIFICIAL FOOTER (fancy footer cannot exceed linewidth) 
@@ -522,7 +526,7 @@
 
 \null
 \vspace*{\fill}
-\hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.5\linewidth][c]{\mystrut \small \textcolor{white}{www.jankuester.com} $\cdot$ \textcolor{white}{github.com/jankapunkt}}}
+% \hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.5\linewidth][c]{\mystrut \small \textcolor{white}{https://bitbucket.org/glavmonter/}}}
 
 
 %============================================================================%
